@@ -1,0 +1,31 @@
+<div class="search-div">
+   <h1 class="search-label">Plant's Watering Schedule</h1>
+   <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show"  role="alert">
+    <strong>Successful!!</strong> Updated schedule in the database.
+    <button type="button" (click)="onCloseMessageClick()" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+   <button type="button" (click)="onUpload()" class="btn btn-info" style="position:fixed;;right: 10px; bottom: 10px;">Upload Schedule</button>
+</div>
+<table class="table table-dark">
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Plant Name</th>
+            <th scope="col">Last Watered Date</th>
+            <th scope="col">Watering Frequency</th>
+            <th scope="col">Status</th>
+          </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let plantDetail of plantDetails">
+    <td>{{plantDetail.plantName}}</td>
+    <td><app-update-status [plantDetail]="plantDetail" > </app-update-status></td>
+    <td>{{plantDetail.wateringFrequency}}</td>
+    <td><div  style="background-color:{{plantDetail.status}};" class="plant-status"></div></td>
+    
+    </tr>
+    </tbody>
+</table>
+

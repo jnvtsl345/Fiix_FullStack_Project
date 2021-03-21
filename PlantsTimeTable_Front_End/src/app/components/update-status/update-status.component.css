@@ -1,0 +1,19 @@
+.update-input{
+    position: relative;
+    padding:5px;
+   text-align: center;
+   width: 100px;
+}
+.decrement-btn{
+  
+    text-align: center;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    background-color: red;
+    border-color: transparent;
+}
+.label-days{
+    position: relative;
+    padding:5px;
+}

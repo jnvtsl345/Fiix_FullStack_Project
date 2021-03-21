@@ -1,0 +1,5 @@
+<div class="btn-group">
+    <button type="button" (click)="onDecrement(this.plantDetail.lastWatered)"  class="btn btn-danger">-</button>
+    <input class="update-input" readonly type="text" value="{{this.plantDetail.lastWatered}}" />
+    <button type="button" (click)="onIncrement(this.plantDetail.lastWatered)" class="btn btn-success">+</button>
+</div>
